@@ -31,30 +31,25 @@ dcrpulse is a comprehensive Decred blockchain explorer and wallet dashboard comb
 
 ### Installation Steps
 
-1. **Open CasaOS Settings**
-   - Click on your profile icon in the top right corner
-   - Select "Settings" from the dropdown menu
+1. **Open the App Store**
+   - Open the CasaOS Dashboard
+   - Click on the "App Store" icon
 
-2. **Navigate to App Store Settings**
-   - In the Settings sidebar, click on "App Store"
-   - Scroll down to the "Third-Party App Stores" section
+2. **Access Third-Party App Stores**
+   - Click on the dropdown on the right-hand side that says "3xx apps" (or similar)
+   - Select "More apps" from the dropdown menu
 
 3. **Add Custom App Store**
-   - Click the "+ Add Source" button
-   - Enter the following archive URL:
+   - Paste the following archive URL:
      ```
      https://github.com/karamble/karambles-casaos/archive/refs/heads/master.zip
      ```
-   - Click "Add" to save
+   - Click "Add"
    - CasaOS will download and process the app store
 
-4. **Refresh App Store**
-   - Return to the CasaOS App Store main page
-   - Click the refresh icon or reload the page
-   - You should now see "Karamble's AppStore" in your app store sources
-
-5. **Install dcrpulse**
-   - Browse to the Finance category or search for "dcrpulse"
+4. **Search and Install dcrpulse**
+   - In the App Store search bar, type: `dcr`
+   - Find the dcrpulse app in the search results
    - Click on the dcrpulse card
    - Click "Install" and follow the installation wizard
    - **Note:** Initial blockchain sync takes 4-8 hours

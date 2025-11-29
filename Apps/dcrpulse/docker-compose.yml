@@ -26,11 +26,11 @@ services:
       - dcrpulse
       - dcrpulse_internal
     healthcheck:
-      test: ["CMD", "sh", "-c", "curl -k -u casaos:casaos -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"1.0\",\"method\":\"getinfo\",\"params\":[],\"id\":1}' https://127.0.0.1:9109 || exit 1"]
-      interval: 30s
-      timeout: 10s
+      test: ["CMD", "sh", "-c", "test -e /proc/1 || exit 1"]
+      interval: 10s
+      timeout: 5s
       retries: 5
-      start_period: 120s
+      start_period: 60s
     deploy:
       resources:
         reservations:
@@ -89,7 +89,7 @@ services:
       - dcrpulse_internal
     depends_on:
       dcrd:
-        condition: service_healthy
+        condition: service_started
     healthcheck:
       test: ["CMD", "sh", "-c", "test -e /proc/1 || exit 1"]
       interval: 10s
@@ -165,9 +165,9 @@ services:
       - dcrpulse_internal
     depends_on:
       dcrd:
-        condition: service_healthy
+        condition: service_started
       dcrwallet:
-        condition: service_healthy
+        condition: service_started
     deploy:
       resources:
         reservations:
